@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Cadastro de produtos</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="formContainer">
+        <h2>Cadastrar produto:</h2>
+        <div class="form">
+          <form id="myForm" action="/" method="post">
+            <label for="name">Nome do produto:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="description">Descrição do produto:</label>
+            <input type="text" id="description" name="description" required />
+            <label for="price">Valor do produto:</label>
+            <input type="number" id="price" name="price" step="0.01" required />
+            <div class="checkbox">
+              <label for="availability" id="availability" name="availability"
+                >Disponível para venda:</label
+              >
+              <input type="checkbox" id="availability" name="availability" />
+            </div>
+
+            <button type="submit">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="listContainer">
+        <h2>Produtos cadastrados:</h2>
+        <table class="products" id="products">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Valor</th>
+              <th>Descrição</th>
+              <th>Disponível</th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
